@@ -7,5 +7,7 @@ standard deviation
 """
 
 
-def lower_quartile():
-    return 0
+def lower_quartile(num_list:list)->int:
+    num_list.sort()
+    return num_list[1]
+
