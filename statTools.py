@@ -5,3 +5,7 @@ upper_quartile
 variance
 standard deviation
 """
+
+
+def lower_quartile():
+    return 0
