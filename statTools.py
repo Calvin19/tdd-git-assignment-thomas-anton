@@ -20,3 +20,7 @@ def lower_quartile(num_list: list)->float:
         num_1 = num_list[len(num_list)//4]
         num_2 = num_list[len(num_list)//4 - 1]
         return (num_1 + num_2)/2
+    elif len(num_list) % 4 == 3:
+        num_1 = num_list[len(num_list) // 4]
+        num_2 = num_list[len(num_list) // 4 + 1]
+        return (num_1 + num_2) / 2
