@@ -2,8 +2,8 @@
 work on:
 lower_quartile
 upper_quartile
-variance
-standard deviation
+median
+mode
 """
 
 
@@ -14,11 +14,9 @@ def lower_quartile(num_list: list)->float:
     use nums before median when using an even sized list
     """
     num_list.sort()
-    if len(num_list) % 2 != 0:
-        #if list is odd length
-        num_list = num_list[0:len(num_list)//2 + 1]#takes first half of list
-
-    return num_list
-
-
-print(lower_quartile([1, 2, 3, 5, 7, 9, 10]))
+    if len(num_list) % 4 == 2: #check for even sized lists where the LQ is in the list
+        return num_list[len(num_list)//4]
+    elif len(num_list) % 4 == 0: #check if list is even and LQ is found an average of 2 numbers
+        num_1 = num_list[len(num_list)//4]
+        num_2 = num_list[len(num_list)//4 - 1]
+        return (num_1 + num_2)/2
