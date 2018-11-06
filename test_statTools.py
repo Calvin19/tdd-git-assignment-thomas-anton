@@ -14,6 +14,11 @@ def lower_q_test_3():
     assert (lower_quartile([0, 25, 50, 75, 100, 125, 150]) == 37.5)
 
 
+def lower_q_test_4():
+    assert (lower_quartile([1, 2, 3, 4, 5, 6, 7, 8, 9]) == 3)
+
+
 lower_q_test_1()
 lower_q_test_2()
 #lower_q_test_3()
+lower_q_test_4()
