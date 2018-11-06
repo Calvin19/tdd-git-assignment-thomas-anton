@@ -30,8 +30,16 @@ def lower_q_test_3():
 def lower_q_test_4():
     assert (lower_quartile([1, 2, 3, 4, 5, 6, 7, 8, 9]) == 3)  # general case--returns item from index in list
 
+# upper quartile tests
+
+
+def upper_q_test_1():
+    assert (upper_quartile() == 5)
+
 
 lower_q_test_1()
 lower_q_test_2()
 lower_q_test_3()
 lower_q_test_4()
+
+upper_q_test_1()
