@@ -1,5 +1,17 @@
+"""
+----------------------------------------------------------
+Filename: test_tatTools.py
+Purpose: tests the functions in statTools.py
+
+Author: Maglietta.T
+
+Created: 31/10/2018
+----------------------------------------------------------
+"""
+
 import pytest
 from statTools import *
+
 # lower quartile tests
 
 
@@ -17,8 +29,6 @@ def lower_q_test_3():
 
 def lower_q_test_4():
     assert (lower_quartile([1, 2, 3, 4, 5, 6, 7, 8, 9]) == 3)  # general case--returns item from index in list
-
-# upper quartile tests
 
 
 lower_q_test_1()

@@ -1,17 +1,21 @@
 """
-work on:
-lower_quartile
-upper_quartile
-median
-mode
+----------------------------------------------------------
+Filename: statTools.py
+Purpose: provide tools in order to find statistics: median, mode, lower quartile, and upper quartile
+
+Author: Maglietta.T
+
+Created: 31/10/2018
+----------------------------------------------------------
 """
 
 
 def lower_quartile(num_list: list) -> float:
     """
-    -median of lower half of list
-    -include median when searching in an odd sized list
-    -use nums before median when using an even sized list
+    Finds the lower quartile in a list of integers
+
+    :param num_list: list of integers to find the lower quartile of
+    :return: the lower quartile of num_list
     """
     num_list.sort()  # sort the list or it will not be accurate
     key_index = len(num_list) // 4
