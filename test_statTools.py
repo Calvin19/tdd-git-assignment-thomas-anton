@@ -3,7 +3,7 @@ from statTools import *
 
 
 def lower_q_test_1():
-    assert(lower_quartile([0, 50, 100, 150]) == 0)
+    assert(lower_quartile([0, 50, 100, 150]) == 25)
 
 
 def lower_q_test_2():
