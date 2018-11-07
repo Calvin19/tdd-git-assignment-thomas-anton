@@ -37,9 +37,14 @@ def upper_q_test_1():
     assert (upper_quartile() == 5)
 
 
+def upper_q_test_2():
+    assert (upper_quartile() == 3)
+
+
 lower_q_test_1()
 lower_q_test_2()
 lower_q_test_3()
 lower_q_test_4()
 
 upper_q_test_1()
+upper_q_test_2()
