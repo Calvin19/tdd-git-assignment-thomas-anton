@@ -31,5 +31,5 @@ def lower_quartile(num_list: list) -> float:
         return (num_1 + num_2) / 2  # LQ found is an average of 2 numbers
 
 
-def upper_quartile() -> float:
+def upper_quartile(num_list) -> float:
     return 5
