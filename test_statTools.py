@@ -76,6 +76,10 @@ def upper_q_test_2():
     assert (upper_quartile(test_list_2) == 5)
 
 
+def upper_q_test_3():
+    assert  (upper_quartile(test_list_3) == 5.5)
+
+
 lower_q_test_1()
 lower_q_test_2()
 lower_q_test_3()
@@ -90,3 +94,4 @@ lower_q_test_8()
 
 upper_q_test_1()
 upper_q_test_2()
+upper_q_test_3()
