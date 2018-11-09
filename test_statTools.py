@@ -95,6 +95,8 @@ def upper_q_test_6():
 def upper_q_test_7():
     assert (upper_quartile(test_list_7) == 1)
 
+# median tests
+
 
 def median_test_1():
     assert (median(test_list_1) == 2.5)
@@ -106,6 +108,22 @@ def median_test_2():
 
 def median_test_3():
     assert (median(test_list_3) == 4)
+
+
+def median_test_4():
+    assert (median(test_list_4) == 5)
+
+
+def median_test_5():
+    assert (median(test_list_5) == 2)
+
+
+def median_test_6():
+    assert (median(test_list_6) == 1.5)
+
+
+def median_test_7():
+    assert (median(test_list_7) == 1)
 
 
 """
@@ -133,3 +151,7 @@ upper_q_test_7()
 median_test_1()
 median_test_2()
 median_test_3()
+median_test_4()
+median_test_5()
+median_test_6()
+median_test_7()
