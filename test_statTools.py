@@ -103,6 +103,11 @@ def median_test_1():
 def median_test_2():
     assert (median(test_list_2) == 3.5)
 
+
+def median_test_3():
+    assert (median(test_list_3) == 4)
+
+
 """
 lower_q_test_1()
 lower_q_test_2()
@@ -126,3 +131,4 @@ upper_q_test_7()
 
 median_test_1()
 median_test_2()
+median_test_3()
