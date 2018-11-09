@@ -67,3 +67,5 @@ def median(num_list):
         num_1 = num_list[key_index]
         num_2 = num_list[key_index - 1]
         return (num_1 + num_2) / 2
+    if len(num_list) % 2 == 1:
+        return num_list[key_index]
