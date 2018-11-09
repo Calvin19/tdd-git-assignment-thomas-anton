@@ -60,5 +60,10 @@ def upper_quartile(num_list):
         return (num_1 + num_2) / 2
 
 
-def median():
-    return 2
+def median(num_list):
+    num_list.sort()
+    key_index = len(num_list) // 2
+    if len(num_list) % 2 == 0:
+        num_1 = num_list[key_index]
+        num_2 = num_list[key_index - 1]
+        return (num_1 + num_2) / 2
