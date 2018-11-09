@@ -99,6 +99,10 @@ def upper_q_test_7():
 def median_test_1():
     assert (median() == 2)
 
+
+def median_test_2():
+    assert (median() == 3.5)
+
 """
 lower_q_test_1()
 lower_q_test_2()
@@ -121,3 +125,4 @@ upper_q_test_6()
 upper_q_test_7()
 
 median_test_1()
+median_test_2()
