@@ -41,7 +41,7 @@ def lower_quartile(num_list: list):
 
 def upper_quartile(num_list):
     num_list.sort()
-    key_index = len(num_list) - (len(num_list)//4)-1
+    key_index = (len(num_list)-1) - (len(num_list)//4)
     if len(num_list) % 4 == 2:
         return num_list[key_index]
     elif len(num_list) % 4 == 0:
@@ -52,6 +52,6 @@ def upper_quartile(num_list):
         num_1 = num_list[key_index]
         num_2 = num_list[key_index - 1]
         return (num_1 + num_2) / 2
-
-
-
+    elif len(num_list) % 4 == 1:
+        print(key_index)
+        return num_list[key_index]
