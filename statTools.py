@@ -10,7 +10,7 @@ Created: 31/10/2018
 """
 
 
-def lower_quartile(num_list: list) -> float:
+def lower_quartile(num_list: list):
     """
     Finds the lower quartile in a list of integers
 
@@ -32,10 +32,20 @@ def lower_quartile(num_list: list) -> float:
             num_2 = num_list[key_index + 1]
             return (num_1 + num_2) / 2  # LQ found is an average of 2 numbers
     except ValueError:
-        print('Name Error')
+        print('Value Error')
+        return ValueError
     except IndexError:
         print('Index Error')
+        return IndexError
 
 
-def upper_quartile(num_list) -> float:
-    return 5
+def upper_quartile(num_list):
+    num_list.sort()
+    key_index = len(num_list) - (len(num_list)//4)-1
+    if len(num_list) % 4 == 2:
+        return num_list[key_index]
+    if len(num_list) % 4 == 0:
+        num_1 = num_list[key_index]
+        num_2 = num_list[key_index + 1]
+        return (num_1 + num_2) / 2
+

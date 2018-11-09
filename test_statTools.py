@@ -55,7 +55,7 @@ def lower_q_test_7():
 
 
 def lower_q_test_8():
-    assert (lower_quartile(test_list_8) is None)
+    assert (lower_quartile(test_list_8) is IndexError)
 
 
 def lower_q_test_9():
@@ -67,14 +67,14 @@ def lower_q_test_10():
 
 # upper quartile tests
 
-"""
+
 def upper_q_test_1():
-    assert (upper_quartile() == 5)
+    assert (upper_quartile(test_list_1) == 3.5)
 
 
 def upper_q_test_2():
-    assert (upper_quartile() == 3)
-"""
+    assert (upper_quartile(test_list_2) == 5)
+
 
 lower_q_test_1()
 lower_q_test_2()
@@ -83,10 +83,10 @@ lower_q_test_4()
 lower_q_test_5()
 lower_q_test_6()
 lower_q_test_7()
-#lower_q_test_8()
+lower_q_test_8()
 #lower_q_test_9()
-lower_q_test_10
+#lower_q_test_10()
 
 
-#upper_q_test_1()
-#upper_q_test_2()
+upper_q_test_1()
+upper_q_test_2()
