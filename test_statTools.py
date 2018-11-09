@@ -96,6 +96,11 @@ def upper_q_test_7():
     assert (upper_quartile(test_list_7) == 1)
 
 
+def median_test_1():
+    assert (median() == 2)
+
+
+
 lower_q_test_1()
 lower_q_test_2()
 lower_q_test_3()
@@ -115,3 +120,5 @@ upper_q_test_4()
 upper_q_test_5()
 upper_q_test_6()
 upper_q_test_7()
+
+median_test_1()
