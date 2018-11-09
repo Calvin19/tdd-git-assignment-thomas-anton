@@ -44,8 +44,13 @@ def upper_quartile(num_list):
     key_index = len(num_list) - (len(num_list)//4)-1
     if len(num_list) % 4 == 2:
         return num_list[key_index]
-    if len(num_list) % 4 == 0:
+    elif len(num_list) % 4 == 0:
         num_1 = num_list[key_index]
         num_2 = num_list[key_index + 1]
         return (num_1 + num_2) / 2
+    elif len(num_list) % 4 == 3:
+        num_1 = num_list[key_index]
+        num_2 = num_list[key_index - 1]
+        return (num_1 + num_2) / 2
+
 
