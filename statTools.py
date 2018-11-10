@@ -31,12 +31,12 @@ def lower_quartile(num_list: list):
             num_1 = num_list[key_index]
             num_2 = num_list[key_index + 1]
             return (num_1 + num_2) / 2  # LQ found is an average of 2 numbers
-    except ValueError:
-        print('Value Error')
-        return ValueError
     except IndexError:
-        print('Index Error')
-        return IndexError
+        raise IndexError('index is out of range')
+    except TypeError:
+        raise TypeError('a list of integers was not provided')
+    except AttributeError:
+        raise AttributeError('a list of integers was not provided')
 
 
 def upper_quartile(num_list):
@@ -61,6 +61,11 @@ def upper_quartile(num_list):
 
 
 def median(num_list):
+    """
+    Finds the median in a list of  integers
+    :param num_list: list
+    :return: the median of the list
+    """
     num_list.sort()
     key_index = len(num_list) // 2
     if len(num_list) % 2 == 0:
