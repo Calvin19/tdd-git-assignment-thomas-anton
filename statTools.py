@@ -103,8 +103,8 @@ def mode(item_list):
     """
     try:
         item_list.sort()
-        max_occs = 0
-        cur_occs = 0
+        max_occs = 0  # most occurrences of a value in the list
+        cur_occs = 0  # number of occurrences of the currently evaluated value
         mode_list = []
         if not item_list:  # Check for empty list to return no mode
             return []
