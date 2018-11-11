@@ -190,5 +190,17 @@ def test_mode_5():
     assert (mode([]) == [])  # empty list has no mode
 
 
-def test_mode_strls():
+def test_mode_str_ls():
     assert (mode(['a', 'a', 'b']) == ['a'])  # list of strings can have mode
+
+
+def test_mode_not_ls():
+    with pytest.raises(AttributeError) as errmsg:
+        mode(1)
+    assert ('Must input a list' == str(errmsg.value))
+
+
+def test_mode_multi_type():
+    with pytest.raises(TypeError) as errmsg:
+        mode([1, 'a'])
+    assert ('Must input a list that contains only 1 data type' == str(errmsg.value))
