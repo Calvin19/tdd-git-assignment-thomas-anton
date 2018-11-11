@@ -187,4 +187,8 @@ def test_mode_4():
 
 
 def test_mode_5():
-    assert (mode([]) == []) # empty list has no mode
+    assert (mode([]) == [])  # empty list has no mode
+
+
+def test_mode_strls():
+    assert (mode(['a', 'a', 'b']) == ['a'])  # list of strings can have mode
