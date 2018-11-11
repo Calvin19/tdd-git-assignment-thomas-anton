@@ -11,27 +11,26 @@ Created: 31/10/2018
 
 
 def lower_quartile(num_list: list) -> float:
-    """
-    Finds the lower quartile in a list of integers
+    """Finds the lower quartile in a list of integers
 
     :param num_list: list of integers to find the lower quartile of
-    :return: the lower quartile of num_list
+    :return: float the lower quartile of num_list
     """
 
     try:
         exception_raiser = sum(num_list)  # force type error if not processing a list of ints
         num_list.sort()  # sort the list or it will not be accurate
-        key_index = len(num_list) // 4
+        key_index = len(num_list)//4
         if len(num_list) % 4 == 2 or len(num_list) % 4 == 1:  # check for lists where the LQ is in the list
             return num_list[key_index]
         elif len(num_list) % 4 == 0:  # check if list is even
             num_1 = num_list[key_index]
             num_2 = num_list[key_index - 1]  # LQ found is an average of 2 numbers
-            return (num_1 + num_2) / 2
+            return (num_1 + num_2)/2
         elif len(num_list) % 4 == 3:  # check if list is odd
             num_1 = num_list[key_index]
             num_2 = num_list[key_index + 1]
-            return (num_1 + num_2) / 2  # LQ found is an average of 2 numbers
+            return (num_1 + num_2)/2  # LQ found is an average of 2 numbers
     except IndexError:
         raise IndexError('index is out of range')
     except TypeError:
@@ -41,11 +40,10 @@ def lower_quartile(num_list: list) -> float:
 
 
 def upper_quartile(num_list: list) -> float:
-    """
-    Finds the upper quartile in a list of integers
+    """Finds the upper quartile in a list of integers
 
     :param num_list: list of integers to find the upper quartile of
-    :return: the upper quartile of num_list
+    :return: float the upper quartile of num_list
     """
     try:
         exception_raiser = sum(num_list)  # force type error if not processing a list of ints
@@ -56,11 +54,11 @@ def upper_quartile(num_list: list) -> float:
         elif len(num_list) % 4 == 0:  # check for lists where UQ is the average between to numbers
             num_1 = num_list[key_index]
             num_2 = num_list[key_index + 1]
-            return (num_1 + num_2) / 2
+            return (num_1 + num_2)/2
         elif len(num_list) % 4 == 3:  # check for lists where UQ is the average between to numbers
             num_1 = num_list[key_index]
             num_2 = num_list[key_index - 1]
-            return (num_1 + num_2) / 2
+            return (num_1 + num_2)/2
     except IndexError:
         raise IndexError('index is out of range')
     except TypeError:
@@ -70,20 +68,19 @@ def upper_quartile(num_list: list) -> float:
 
 
 def median(num_list: list) -> float:
-    """
-    Finds the median in a list of  integers
+    """Finds the median in a list of  integers
 
     :param num_list: list
-    :return: the median of the list
+    :return: float the median of num_list
     """
     try:
         exception_raiser = sum(num_list)  # force type error if not processing a list of ints
         num_list.sort()
-        key_index = len(num_list) // 2
+        key_index = len(num_list)//2
         if len(num_list) % 2 == 0:  # check if median is average of two middle numbers
             num_1 = num_list[key_index]
             num_2 = num_list[key_index - 1]
-            return (num_1 + num_2) / 2
+            return (num_1 + num_2)/2
         if len(num_list) % 2 == 1:  # check if median is single middle number in list
             return num_list[key_index]
     except IndexError:
@@ -95,11 +92,10 @@ def median(num_list: list) -> float:
 
 
 def mode(item_list):
-    """
-    Finds the mode of a list containing one data type
+    """Finds the mode of a list containing one data type
 
     :param item_list: list of items to find the mode of
-    :return: the mode of the list
+    :return: list the mode of item_list
     """
     try:
         item_list.sort()
