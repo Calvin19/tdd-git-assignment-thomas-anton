@@ -1,4 +1,0 @@
-range
-mean
-variance
-standard deviation
