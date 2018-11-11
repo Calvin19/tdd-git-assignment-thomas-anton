@@ -57,7 +57,7 @@ def test_lower_q_7():
 def test_lower_q_8():  # unusual case --  empty list
     with pytest.raises(IndexError) as errmsg:
         lower_quartile(test_empty_list)
-    assert ('index is out of range' == str(errmsg))
+    assert ('index is out of range' == str(errmsg.value))
 
 
 def test_lower_q_9():  # unusual case -- not a list
@@ -101,6 +101,24 @@ def test_upper_q_6():
 def test_upper_q_7():
     assert (upper_quartile(test_list_7) == 1)
 
+
+def test_upper_q_8():  # unusual case --  empty list
+    with pytest.raises(IndexError) as errmsg:
+        upper_quartile(test_empty_list)
+    assert ('index is out of range' == str(errmsg.value))
+
+
+def test_upper_q_9():  # unusual case -- not a list
+    with pytest.raises(AttributeError) as errmsg:
+        upper_quartile(test_not_list)
+    assert ('a list of integers was not provided' == str(errmsg.value))
+
+
+def test_upper_q_10():  # unusual case -- list of strings
+    with pytest.raises(TypeError) as errmsg:
+        upper_quartile(test_str_list)
+    assert ('a list of integers was not provided' == str(errmsg.value))
+
 # median tests
 
 
@@ -130,4 +148,22 @@ def test_median_6():
 
 def test_median_7():
     assert (median(test_list_7) == 1)
+    
+    
+def test_median_8():  # unusual case --  empty list
+    with pytest.raises(IndexError) as errmsg:
+        median(test_empty_list)
+    assert ('index is out of range' == str(errmsg.value))
+
+
+def test_median_9():  # unusual case -- not a list
+    with pytest.raises(AttributeError) as errmsg:
+        median(test_not_list)
+    assert ('a list of integers was not provided' == str(errmsg.value))
+
+
+def test_median_10():  # unusual case -- list of strings
+    with pytest.raises(TypeError) as errmsg:
+        median(test_str_list)
+    assert ('a list of integers was not provided' == str(errmsg.value))
 

@@ -10,7 +10,7 @@ Created: 31/10/2018
 """
 
 
-def lower_quartile(num_list: list):
+def lower_quartile(num_list: list) -> float:
     """
     Finds the lower quartile in a list of integers
 
@@ -39,38 +39,52 @@ def lower_quartile(num_list: list):
         raise AttributeError('a list of integers was not provided')
 
 
-def upper_quartile(num_list):
+def upper_quartile(num_list: list) -> float:
     """
     Finds the upper quartile in a list of integers
 
     :param num_list: list of integers to find the upper quartile of
     :return: the upper quartile of num_list
     """
-    num_list.sort()
-    key_index = (len(num_list)-1) - (len(num_list)//4)
-    if len(num_list) % 4 == 2 or len(num_list) % 4 == 1:  # check for lists where UQ is in list
-        return num_list[key_index]
-    elif len(num_list) % 4 == 0:  # check for lists where UQ is the average between to numbers
-        num_1 = num_list[key_index]
-        num_2 = num_list[key_index + 1]
-        return (num_1 + num_2) / 2
-    elif len(num_list) % 4 == 3:  # check for lists where UQ is the average between to numbers
-        num_1 = num_list[key_index]
-        num_2 = num_list[key_index - 1]
-        return (num_1 + num_2) / 2
+    try:
+        num_list.sort()
+        key_index = (len(num_list)-1) - (len(num_list)//4)
+        if len(num_list) % 4 == 2 or len(num_list) % 4 == 1:  # check for lists where UQ is in list
+            return num_list[key_index]
+        elif len(num_list) % 4 == 0:  # check for lists where UQ is the average between to numbers
+            num_1 = num_list[key_index]
+            num_2 = num_list[key_index + 1]
+            return (num_1 + num_2) / 2
+        elif len(num_list) % 4 == 3:  # check for lists where UQ is the average between to numbers
+            num_1 = num_list[key_index]
+            num_2 = num_list[key_index - 1]
+            return (num_1 + num_2) / 2
+    except IndexError:
+        raise IndexError('index is out of range')
+    except TypeError:
+        raise TypeError('a list of integers was not provided')
+    except AttributeError:
+        raise AttributeError('a list of integers was not provided')
 
 
-def median(num_list):
+def median(num_list: list) -> float:
     """
     Finds the median in a list of  integers
     :param num_list: list
     :return: the median of the list
     """
-    num_list.sort()
-    key_index = len(num_list) // 2
-    if len(num_list) % 2 == 0:
-        num_1 = num_list[key_index]
-        num_2 = num_list[key_index - 1]
-        return (num_1 + num_2) / 2
-    if len(num_list) % 2 == 1:
-        return num_list[key_index]
+    try:
+        num_list.sort()
+        key_index = len(num_list) // 2
+        if len(num_list) % 2 == 0:  # check if median is average of two middle numbers
+            num_1 = num_list[key_index]
+            num_2 = num_list[key_index - 1]
+            return (num_1 + num_2) / 2
+        if len(num_list) % 2 == 1:  # check if median is single middle number in list
+            return num_list[key_index]
+    except IndexError:
+        raise IndexError('index is out of range')
+    except TypeError:
+        raise TypeError('a list of integers was not provided')
+    except AttributeError:
+        raise AttributeError('a list of integers was not provided')
