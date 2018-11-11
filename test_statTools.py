@@ -171,16 +171,16 @@ def test_median_10():  # unusual case -- list of strings
 
 
 def test_mode_1():
-    assert(mode([1, 1, 2]) == 1)  # general case
+    assert(mode([1, 1, 2]) == [1])  # general case
 
 
 def test_mode_2():
-    assert (mode([1, 2, 2]) == 2)  # general case
+    assert (mode([1, 1, 2, 2, 2]) == [2])  # general case
 
 
 def test_mode_3():
-    assert (mode([1]) == 1)  # general case
+    assert (mode([1]) == [1])  # general case
 
 
 def test_mode_4():
-    assert (mode(1, 1, 2, 2, 3) == [1, 2])  # corner case has more than 1 mode
+    assert (mode([1, 1, 2, 2, 3]) == [1, 2])  # corner case has more than 1 mode
