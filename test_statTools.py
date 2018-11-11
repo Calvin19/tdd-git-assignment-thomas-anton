@@ -61,7 +61,7 @@ def test_lower_q_8():  # unusual case --  empty list
 
 
 def test_lower_q_9():  # unusual case -- not a list
-    with pytest.raises(AttributeError) as errmsg:
+    with pytest.raises(TypeError) as errmsg:
         lower_quartile(test_not_list)
     assert ('a list of integers was not provided' == str(errmsg.value))
 
@@ -109,7 +109,7 @@ def test_upper_q_8():  # unusual case --  empty list
 
 
 def test_upper_q_9():  # unusual case -- not a list
-    with pytest.raises(AttributeError) as errmsg:
+    with pytest.raises(TypeError) as errmsg:
         upper_quartile(test_not_list)
     assert ('a list of integers was not provided' == str(errmsg.value))
 
@@ -157,7 +157,7 @@ def test_median_8():  # unusual case --  empty list
 
 
 def test_median_9():  # unusual case -- not a list
-    with pytest.raises(AttributeError) as errmsg:
+    with pytest.raises(TypeError) as errmsg:
         median(test_not_list)
     assert ('a list of integers was not provided' == str(errmsg.value))
 

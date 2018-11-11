@@ -19,6 +19,7 @@ def lower_quartile(num_list: list) -> float:
     """
 
     try:
+        exception_raiser = sum(num_list)  # force type error if not processing a list of ints
         num_list.sort()  # sort the list or it will not be accurate
         key_index = len(num_list) // 4
         if len(num_list) % 4 == 2 or len(num_list) % 4 == 1:  # check for lists where the LQ is in the list
@@ -47,6 +48,7 @@ def upper_quartile(num_list: list) -> float:
     :return: the upper quartile of num_list
     """
     try:
+        exception_raiser = sum(num_list)  # force type error if not processing a list of ints
         num_list.sort()
         key_index = (len(num_list)-1) - (len(num_list)//4)
         if len(num_list) % 4 == 2 or len(num_list) % 4 == 1:  # check for lists where UQ is in list
@@ -74,6 +76,7 @@ def median(num_list: list) -> float:
     :return: the median of the list
     """
     try:
+        exception_raiser = sum(num_list)  # force type error if not processing a list of ints
         num_list.sort()
         key_index = len(num_list) // 2
         if len(num_list) % 2 == 0:  # check if median is average of two middle numbers
