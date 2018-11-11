@@ -72,6 +72,7 @@ def upper_quartile(num_list: list) -> float:
 def median(num_list: list) -> float:
     """
     Finds the median in a list of  integers
+
     :param num_list: list
     :return: the median of the list
     """
@@ -93,36 +94,40 @@ def median(num_list: list) -> float:
         raise AttributeError('a list of integers was not provided')
 
 
-def mode(num_list):
+def mode(item_list):
+    """
+    Finds the mode of a list containing one data type
+
+    :param item_list: list of items to find the mode of
+    :return: the mode of the list
+    """
     try:
-        num_list.sort()
+        item_list.sort()
         max_occs = 0
         cur_occs = 0
         mode_list = []
-        if not num_list:
+        if not item_list:  # Check for empty list to return no mode
             return []
-        prev_num = num_list[0]
+        prev_item = item_list[0]
         i = 0
-        while i < len(num_list):
-            if num_list[i] == prev_num:
+        while i < len(item_list):  # use while since for
+            if item_list[i] == prev_item:  # check if current item is the same as the last item
                 cur_occs += 1
             else:
-                if cur_occs > max_occs:
+                if cur_occs > max_occs:  # check if there needs to be a new mode
                     max_occs = cur_occs
-                    mode_list = [num_list[i - 1]]
-                elif cur_occs == max_occs:
-                    mode_list.append(num_list[i-1])
-                cur_occs = 1
-            prev_num = num_list[i]
-            print(cur_occs)
+                    mode_list = [item_list[i - 1]]  # replace mode(s) with new mode
+                elif cur_occs == max_occs:  # check if there is an/are additional mode(s)
+                    mode_list.append(item_list[i - 1])  # add new mode to list
+                cur_occs = 1  # reset occurrences since new item
+            prev_item = item_list[i]
             i += 1
-        if cur_occs > max_occs:
-            mode_list = [num_list[len(num_list)-1]]
+        if cur_occs > max_occs:  # if elif statement does mode checks for last set of items in list
+            mode_list = [item_list[len(item_list) - 1]]
         elif cur_occs == max_occs:
-            mode_list.append(num_list[i - 1])
+            mode_list.append(item_list[i - 1])
         return mode_list
     except TypeError:
         raise TypeError('Must input a list that contains only 1 data type')
     except AttributeError:
         raise AttributeError('Must input a list')
-
