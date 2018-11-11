@@ -93,5 +93,24 @@ def median(num_list: list) -> float:
         raise AttributeError('a list of integers was not provided')
 
 
-def mode() -> float:
-    return 1
+def mode(num_list):
+    num_list.sort()
+    max_occs = 0
+    cur_occs = 0
+    prev_num = num_list[0]
+    r_mode = num_list[0]
+    i = 0
+    while i < len(num_list):
+        if num_list[i] == prev_num:
+            cur_occs += 1
+        else:
+            if cur_occs > max_occs:
+                max_occs = cur_occs
+                r_mode = num_list[i - 1]
+            cur_occs = 1
+        prev_num = num_list[i]
+        print(cur_occs)
+        i += 1
+    if cur_occs > max_occs:
+        r_mode = num_list[len(num_list)-1]
+    return r_mode
