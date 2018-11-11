@@ -174,11 +174,11 @@ def test_mode_5():
     assert (mode([]) == [])  # corner case -- empty list has no mode
 
 
-def test_mode_str_ls():
-    assert (mode(['a', 'a', 'b']) == ['a'])  # list of strings can have mode
+def test_mode_str_ls():  # list of strings can have mode
+    assert (mode(['a', 'a', 'b']) == ['a'])
 
 
-def test_mode_not_ls(): # unusual case -- not a list
+def test_mode_not_ls():  # unusual case -- not a list
     with pytest.raises(AttributeError) as errmsg:
         mode(1)
     assert ('Must input a list' == str(errmsg.value))
