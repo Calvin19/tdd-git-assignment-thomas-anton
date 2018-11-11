@@ -167,3 +167,6 @@ def test_median_10():  # unusual case -- list of strings
         median(test_str_list)
     assert ('a list of integers was not provided' == str(errmsg.value))
 
+
+def test_mode_1():
+    assert(mode() == 1)
