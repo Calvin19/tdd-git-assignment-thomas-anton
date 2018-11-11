@@ -184,3 +184,7 @@ def test_mode_3():
 
 def test_mode_4():
     assert (mode([1, 1, 2, 2, 3]) == [1, 2])  # corner case has more than 1 mode
+
+
+def test_mode_5():
+    assert (mode([]) == []) # empty list has no mode

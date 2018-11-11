@@ -97,8 +97,10 @@ def mode(num_list):
     num_list.sort()
     max_occs = 0
     cur_occs = 0
-    prev_num = num_list[0]
     mode_list = []
+    if not num_list:
+        return []
+    prev_num = num_list[0]
     i = 0
     while i < len(num_list):
         if num_list[i] == prev_num:
