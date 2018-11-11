@@ -1,3 +1,11 @@
+"""
+----------------------------------------------------------
+Filename: test_statTools.py
+Purpose: tests the functions in statTools file
+Author: Anton Varabei
+Created: 11/9/18
+----------------------------------------------------------
+"""
 import pytest
 from statTools import *
 ltest1 = []
@@ -107,3 +115,50 @@ def testrange11():
 
 def testrange12():
     assert (numrange(ltest12) == "Invalid Input, please try again!")
+
+
+def testvari1():
+  assert (variance(ltest1) == "Invalid Input, please try again!")
+
+
+def testvari2():
+  assert (variance(ltest2) == 0)
+
+
+def testvari3():
+  assert (variance(ltest5) == 0)
+
+
+def testvari4():
+  assert (variance(ltest6) == 0)
+
+
+def testvari5():
+  assert (variance(ltest8) == 4)
+
+
+def testvari6():
+  assert (round(variance(ltest10)) == 14)
+
+def testsdv1():
+  assert (round(standev(ltest1)) == "Invalid Input, please try again!")
+
+
+def testsdv2():
+  assert (round(standev(ltest2)) == 0)
+
+
+def testsdv3():
+  assert (round(standev(ltest5)) == 0)
+
+
+def testsdv4():
+  assert (round(standev(ltest6)) == 0)
+
+
+def testsdv5():
+  assert (round(standev(ltest8)) == 4)
+
+
+def testsdv6():
+  assert (round(standev(ltest10)) == 4)
