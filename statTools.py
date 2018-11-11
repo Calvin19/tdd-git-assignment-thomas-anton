@@ -91,3 +91,7 @@ def median(num_list: list) -> float:
         raise TypeError('a list of integers was not provided')
     except AttributeError:
         raise AttributeError('a list of integers was not provided')
+
+
+def mode() -> float:
+    return 1
