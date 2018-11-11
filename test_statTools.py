@@ -170,3 +170,7 @@ def test_median_10():  # unusual case -- list of strings
 
 def test_mode_1():
     assert(mode() == 1)
+
+
+def test_mode_2():
+    assert (mode() == 2)
