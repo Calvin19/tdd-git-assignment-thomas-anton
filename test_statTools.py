@@ -179,6 +179,8 @@ def test_mode_2():
 
 
 def test_mode_3():
-    assert (mode([1]) == 1)
+    assert (mode([1]) == 1)  # general case
 
 
+def test_mode_4():
+    assert (mode(1, 1, 2, 2, 3) == [1, 2])  # corner case has more than 1 mode
