@@ -1,8 +1,8 @@
 """
 ----------------------------------------------------------
 Filename: test_statTools.py
-Purpose: tests the functions in statTools file
-Author: Anton Varabei
+Purpose: test the functions in statTools file
+Author: Anton Varabei Maglietta.T
 Created: 11/9/18
 ----------------------------------------------------------
 """
@@ -162,19 +162,7 @@ def testsdv5():
 def testsdv6():
   assert (round(standev(ltest10)) == 4)
 
-"""
-----------------------------------------------------------
-Filename: test_tatTools.py
-Purpose: tests the functions in statTools.py
 
-Author: Maglietta.T
-
-Created: 31/10/2018
-----------------------------------------------------------
-"""
-
-import pytest
-from statTools import *
 
 
 test_list_1 = [1, 2, 3, 4]

@@ -2,7 +2,7 @@
 ----------------------------------------------------------
 Filename: statTools.py
 Purpose: perform
-Author: Anton Varabei
+Author: Anton Varabei, Maglietta.T
 Created: 11/9/18
 ----------------------------------------------------------
 """
@@ -40,20 +40,6 @@ def numrange(alist):
     except:
         # if invalid inputs then return the exception message
         return "Invalid Input, please try again!"
-
-
-"""
------------------------------------------------------------------------------------------------------
-Filename: statTools.py
-Purpose: provide tools in order to find statistics: median, mode, lower quartile, and upper quartile
-
-Author: Maglietta.T
-
-Created: 31/10/2018
------------------------------------------------------------------------------------------------------
-"""
-
-
 
 def variance(alist):
     '''
@@ -148,6 +134,7 @@ def upper_quartile(num_list: list) -> float:
         raise TypeError('a list of integers was not provided')
     except AttributeError:
         raise AttributeError('a list of integers was not provided')
+
 
 def median(num_list: list) -> float:
     """Finds the median in a list of  integers
